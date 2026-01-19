@@ -12,7 +12,6 @@
 .inter{
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight: lighter;
 }
 
 .grad-bg{
@@ -70,7 +69,8 @@ nav ul{
     width: 100%;
     color: white;
     background-image: url(../assets/hero-bg.png);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center center;
     height: 760px;
     text-align: center;
@@ -179,6 +179,7 @@ nav ul{
 }
 
 .info p{
+    text-transform: uppercase;
     font-weight: lighter;
 }
 
@@ -204,7 +205,6 @@ nav ul{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 225px);
     margin-bottom: 30px;
-
 }
 
 .grid-container2{
@@ -341,10 +341,11 @@ nav ul{
 }
 
 footer{
+    width: 100%;
     background-image: url(../assets/footer-bg.png);
     background-size: cover;
     text-align: center;
-    height: 412px;
+    height: auto;
     color: white;
 }
 
@@ -397,10 +398,36 @@ footer{
     }
 
     .about-container,
-  .tw-container,
-  .feature-container{
+    .info-container,
+    .tw-container,
+    .feature-container{
     padding: 40px 20px;
-  }
+    }
+
+    .line{
+    margin: 40px auto;
+    }
+
+    .info-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    }
+
+  .grid-container1, 
+  .grid-container2{
+    gap: 30px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    }
+
+    .two-colm, .two-row{
+        grid-column: span 1;
+    }
+
+    #tw-title, .about-title>h3{
+    font-size: 2rem;
+    }
 
     .pod-container{
     flex-direction: column;
@@ -423,7 +450,33 @@ footer{
 
   .h-info{
     align-items: center;
-}
+    }
+
+    footer{
+    background-image: url(../assets/res-footer-bg.png);
+    height: auto;
+    padding-bottom: 40px;
+    background-position: center;
+   }
+
+
+  .footer-container{
+    max-width: 400px;
+    padding: 40px 20px;
+    gap: 24px;
+  }
+
+  #f-logo{
+    width: 100%;
+    height: auto;
+    max-width: 280px;
+  }
+
+  .icon{
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
 
 
 }
