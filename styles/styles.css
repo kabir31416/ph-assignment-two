@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.hide{
+    display: none;
+}
+
 
 .inter{
   font-family: "Inter", sans-serif;
@@ -63,21 +67,25 @@ nav ul{
 }
 
 .hero-section{
+    width: 100%;
     color: white;
     background-image: url(../assets/hero-bg.png);
     background-size: cover;
+    background-position: center center;
     height: 760px;
     text-align: center;
 }
 
-.m-logo{
+#circle-bg{
     position: relative; 
     width: 360px;
     height: 360px;
-    padding: auto 100px;
-    border-radius: 1000px;
-    border: 8px solid rgba(42, 24, 108, 1);
+    background-repeat: no-repeat;
+    background-image: url(../assets/hero-circle.png);
 }
+
+
+
 
 .m-logo img{
     padding: 75px;
@@ -247,23 +255,49 @@ nav ul{
 }
 
 .pod-container{
+    max-width: 1200px;
+    margin: 0px auto;
     display: flex;
     justify-content: space-between;
     gap: 30px;
 }
 
 .pod-card{
-    width: 380px;
-    gap: 0;
+  width: 360px;
+  background: #2b0f4a;
+  border-radius: 24px;
+  overflow: hidden;
+  color: white;
 }
 
-.card-btm{
-    background-color: #250D44;
-    padding: 24px;
-    border-radius: 0 0 24px 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+.video-thumb{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.video-thumb iframe{
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.card-content{
+  padding: 20px;
+}
+
+.card-content h3{
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-content p{
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.8;
+  margin-bottom: 12px;
 }
 
 .f-title{
@@ -280,4 +314,116 @@ nav ul{
     background: rgba(53, 17, 101, 0.4);
     gap: 24px;
     align-items: center;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+.h-info{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.social-icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px; 
+}
+
+.social-icon img{
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid rgba(83, 60, 114, 1);
+    border-radius: 1000px;
+}
+
+footer{
+    background-image: url(../assets/footer-bg.png);
+    background-size: cover;
+    text-align: center;
+    height: 412px;
+    color: white;
+}
+
+.footer-container{
+    padding: 120px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 32px;
+    max-width: 1360px;
+    margin: 0px auto;
+}
+
+#f-logo{
+    width: 410px;
+    height: 60px;
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.icon-con{
+    display: flex;
+    gap: 8px;
+}
+
+#hb-menu{
+    display: none;
+}
+
+
+@media screen and (max-width: 576px) {
+    
+    nav{
+    padding: 16px 20px;     
+    }
+
+    nav ul, #nav-btn {
+    display: none;  
+    }
+
+    #hb-menu{
+    display: inline;
+    }
+
+    .about-container,
+  .tw-container,
+  .feature-container{
+    padding: 40px 20px;
+  }
+
+    .pod-container{
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pod-card{
+    width: 100%;
+  }
+
+  .f-title{
+    font-size: 30px;
+  }
+
+  .host-container{
+    flex-direction: column;
+    text-align: center;
+    padding: 24px;
+  }
+
+  .h-info{
+    align-items: center;
+}
+
+
 }
